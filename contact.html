@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Say hello — Neena's Noticeables</title>
+<meta name="description" content="Get a quote or say hello. Neena replies to every message herself within two business days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="/">Neena's <span>Noticeables</span></a>
+    <nav class="main" aria-label="Main navigation">
+      <a href="/">home</a>
+      <a href="/collections.html">what I make</a>
+      <a href="/story.html">my story</a>
+      <a href="/companies.html">for companies</a>
+      <a class="cta" href="/contact.html" aria-current="page">say hello</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero" style="padding-bottom:1rem;">
+  <div class="wrap center">
+    <p class="hello hand" style="font-size:1.8rem;color:var(--plum);">I read every message myself</p>
+    <h1>say hello</h1>
+    <p class="lede narrow" style="margin:1.2rem auto 0;">Tell me what you're planning — or just say hi. I'll write back within two business days.</p>
+  </div>
+</section>
+
+<section style="padding-top:1rem;">
+  <div class="wrap center">
+    <form id="quote-form" class="sheet" aria-label="Gift inquiry form">
+      <div class="field"><label for="name">your name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="company">your company (if it's for work)</label><input type="text" id="company" name="company" autocomplete="organization"></div>
+      <div class="field"><label for="email">your email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+      <div class="field"><label for="package">what caught your eye?</label><select id="package" name="package"><option>the event bag ($25, from 25)</option><option>the gift box ($45, from 12)</option><option>the premium box ($75, from 10)</option><option>something custom (from 24)</option><option>not sure yet — just saying hi</option></select></div>
+      <div class="field"><label for="details">tell me what you're imagining</label><textarea id="details" name="details" placeholder="How many people? What's the occasion? When do you need it?"></textarea></div>
+      <p class="center" style="margin-top:1.6rem;"><button class="btn" type="submit">send it to Neena</button></p>
+      <p class="center" style="font-size:1rem;margin-top:1.2rem;">Or just email me: <a href="mailto:neenasnoticeables@bell.net">neenasnoticeables@bell.net</a></p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p style="font-family:'Baloo 2',cursive;font-weight:800;font-size:1.6rem;">Neena's <span style="color:#8FBFBE;">Noticeables</span></p>
+    <p class="hand" style="font-size:1.35rem;color:#C9BEDD;">made by hand, chosen by touch · Toronto</p>
+    <nav aria-label="Footer"><a href="/">home</a><a href="/collections.html">what I make</a><a href="/story.html">my story</a><a href="/companies.html">for companies</a><a href="/contact.html">say hello</a></nav>
+    <p><a href="mailto:neenasnoticeables@bell.net">neenasnoticeables@bell.net</a></p>
+    <p>&copy; 2026 Neena's Noticeables</p>
+  </div>
+</footer>
+<script>
+document.getElementById('quote-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target;
+  var body = 'Name: ' + f.name.value + '\n' + 'Company: ' + (f.company.value || '-') + '\n' + 'Email: ' + f.email.value + '\n' + 'Interested in: ' + f.package.value + '\n\n' + f.details.value;
+  window.location.href = 'mailto:neenasnoticeables@bell.net?subject=' + encodeURIComponent('A gift inquiry for Neena') + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>

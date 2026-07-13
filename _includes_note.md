@@ -1,0 +1,1 @@
+Static site, no build step. Each page duplicates the header/footer markup. Shared styles in styles.css. Fonts: Baloo 2 (headings), Caveat (handwritten accents), Atkinson Hyperlegible (body, accessibility).
