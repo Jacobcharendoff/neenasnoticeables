@@ -17,7 +17,7 @@
     <a class="logo" href="/">Neena's <span>Noticeables</span></a>
     <nav class="main" aria-label="Main navigation">
       <a href="/">home</a>
-      <a href="/collections.html">what I make</a>
+      <a href="/collections.html">the box</a>
       <a href="/story.html">my story</a>
       <a href="/companies.html">for companies</a>
       <a class="cta" href="/contact.html" aria-current="page">say hello</a>
@@ -30,7 +30,7 @@
   <div class="wrap center">
     <p class="hello hand" style="font-size:1.8rem;color:var(--plum);">I read every message myself</p>
     <h1>say hello</h1>
-    <p class="lede narrow" style="margin:1.2rem auto 0;">Tell me what you're planning — or just say hi. I'll write back within two business days.</p>
+    <p class="lede narrow" style="margin:1.2rem auto 0;">Tell me how many evenings you'd like to give — or just say hi. I'll write back within two business days.</p>
   </div>
 </section>
 
@@ -40,8 +40,8 @@
       <div class="field"><label for="name">your name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="company">your company (if it's for work)</label><input type="text" id="company" name="company" autocomplete="organization"></div>
       <div class="field"><label for="email">your email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
-      <div class="field"><label for="package">what caught your eye?</label><select id="package" name="package"><option>a taste of my world ($25, from 25)</option><option>a walk through my world ($45, from 12)</option><option>my whole world ($75, from 10)</option><option>something custom (from 24)</option><option>not sure yet — just saying hi</option></select></div>
-      <div class="field"><label for="details">tell me what you're imagining</label><textarea id="details" name="details" placeholder="How many people? What's the occasion? When do you need it?"></textarea></div>
+      <div class="field"><label for="quantity">how many boxes are you thinking?</label><select id="quantity" name="quantity"><option>12 to 24 ($45 each)</option><option>25 to 49 ($40 each)</option><option>50 or more ($32 each)</option><option>something custom — different budget or VIP list</option><option>not sure yet — just saying hi</option></select></div>
+      <div class="field"><label for="details">tell me what you're imagining</label><textarea id="details" name="details" placeholder="What's the occasion? When do you need them? Any colours?"></textarea></div>
       <p class="center" style="margin-top:1.6rem;"><button class="btn" type="submit">send it to Neena</button></p>
       <p class="center" style="font-size:1rem;margin-top:1.2rem;">Or just email me: <a href="mailto:neenasnoticeables@bell.net">neenasnoticeables@bell.net</a></p>
     </form>
@@ -53,7 +53,7 @@
   <div class="wrap">
     <p style="font-family:'Baloo 2',cursive;font-weight:800;font-size:1.6rem;">Neena's <span style="color:#8FBFBE;">Noticeables</span></p>
     <p class="hand" style="font-size:1.35rem;color:#C9BEDD;">made by hand, chosen by touch · Toronto</p>
-    <nav aria-label="Footer"><a href="/">home</a><a href="/collections.html">what I make</a><a href="/story.html">my story</a><a href="/companies.html">for companies</a><a href="/contact.html">say hello</a></nav>
+    <nav aria-label="Footer"><a href="/">home</a><a href="/collections.html">the box</a><a href="/story.html">my story</a><a href="/companies.html">for companies</a><a href="/contact.html">say hello</a></nav>
     <p><a href="mailto:neenasnoticeables@bell.net">neenasnoticeables@bell.net</a></p>
     <p>&copy; 2026 Neena's Noticeables</p>
   </div>
@@ -62,7 +62,7 @@
 document.getElementById('quote-form').addEventListener('submit', function(e){
   e.preventDefault();
   var f = e.target;
-  var body = 'Name: ' + f.name.value + '\n' + 'Company: ' + (f.company.value || '-') + '\n' + 'Email: ' + f.email.value + '\n' + 'Interested in: ' + f.package.value + '\n\n' + f.details.value;
+  var body = 'Name: ' + f.name.value + '\n' + 'Company: ' + (f.company.value || '-') + '\n' + 'Email: ' + f.email.value + '\n' + 'Quantity: ' + f.quantity.value + '\n\n' + f.details.value;
   window.location.href = 'mailto:neenasnoticeables@bell.net?subject=' + encodeURIComponent('A gift inquiry for Neena') + '&body=' + encodeURIComponent(body);
 });
 </script>
