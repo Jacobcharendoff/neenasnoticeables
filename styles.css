@@ -17,9 +17,10 @@ a:focus,button:focus,input:focus,textarea:focus,select:focus{outline:3px solid v
 .eyebrow{display:block;text-transform:uppercase;letter-spacing:0.22em;font-size:0.8rem;font-weight:700;color:var(--plum);margin-bottom:0.7rem;}
 
 header.site{position:sticky;top:0;z-index:100;background:rgba(248,245,251,0.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--lavender-deep);}
-header.site .bar{max-width:1080px;margin:0 auto;padding:0.9rem 1.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.logo{font-family:'Baloo 2',cursive;font-size:1.55rem;font-weight:800;color:var(--ink);text-decoration:none;}
+header.site .bar{max-width:1080px;margin:0 auto;padding:0.7rem 1.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.logo{font-family:'Caveat',cursive;font-size:2rem;font-weight:700;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:0.55rem;line-height:1;}
 .logo span{color:var(--teal);}
+.logo::before{content:"";display:inline-block;width:34px;height:34px;background-repeat:no-repeat;background-size:contain;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg stroke='%233B3450' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='14' y='26' width='14' height='24' rx='4' fill='%23fff'/%3E%3Cpath d='M21 18 q -2 4 0 7' stroke='%232F6B6A' fill='none'/%3E%3Cellipse cx='21' cy='15' rx='3.4' ry='5' fill='%23F4B860' stroke='%233B3450'/%3E%3Cellipse cx='45' cy='48' rx='11' ry='5' fill='%23fff'/%3E%3Cellipse cx='45' cy='39' rx='8.5' ry='4.5' fill='%23D8CCE9'/%3E%3Cellipse cx='45' cy='31' rx='6' ry='4' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");}
 nav.main{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;}
 nav.main a{font-family:'Baloo 2',cursive;font-size:1.02rem;font-weight:700;color:var(--plum);text-decoration:none;padding:0.2rem 0;}
 nav.main a:hover{color:var(--teal);text-decoration:underline;text-decoration-style:wavy;text-decoration-thickness:1.5px;text-underline-offset:6px;}
@@ -53,10 +54,15 @@ section{padding:4.4rem 0;}
 .card .min{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;color:var(--plum);margin-top:auto;padding-top:0.6rem;}
 .card.featured{border:2.5px solid var(--teal);position:relative;}
 .card.featured::after{content:"the favourite";font-family:'Caveat',cursive;font-size:1.25rem;color:#fff;background:var(--teal);padding:0.1rem 1rem;border-radius:100px;position:absolute;top:-16px;right:20px;transform:rotate(2deg);}
-.icon-doodle{color:var(--plum);margin-bottom:0.4rem;}
+.icon-doodle{color:var(--plum);margin:0 auto 0.5rem;display:block;}
 
 .band{background:var(--lavender);border-top:2.5px dashed var(--lavender-deep);border-bottom:2.5px dashed var(--lavender-deep);}
 .bigquote{font-family:'Baloo 2',cursive;font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--teal);line-height:1.35;max-width:680px;margin:0 auto 1rem;}
+
+.testimonial{max-width:700px;margin:2rem auto 0;background:var(--white);border-radius:22px;box-shadow:var(--shadow);padding:2.4rem 2.6rem;text-align:center;position:relative;}
+.testimonial::before{content:"\201C";font-family:Georgia,serif;font-size:5rem;color:var(--lavender-deep);position:absolute;top:-6px;left:22px;line-height:1;}
+.testimonial p.quote{font-size:1.18rem;font-style:italic;}
+.testimonial p.who{font-family:'Baloo 2',cursive;font-weight:700;color:var(--plum);margin-top:1rem;}
 
 .letter-card{background:var(--white);max-width:680px;margin:2.4rem auto 0;padding:2.8rem 2.6rem 2.4rem;text-align:left;border-radius:6px 26px 6px 26px;box-shadow:var(--shadow);position:relative;}
 .letter-card::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);width:120px;height:30px;background:rgba(216,204,233,0.8);border-left:2px dashed rgba(255,255,255,0.7);border-right:2px dashed rgba(255,255,255,0.7);}
